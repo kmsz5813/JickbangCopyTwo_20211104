@@ -1,5 +1,6 @@
 package com.nepplus.jickbangcopytwo_20211104
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.nepplus.jickbangcopytwo_20211104.adapters.RoomAdapter
@@ -27,6 +28,10 @@ class MainActivity : AppCompatActivity() {
         roomListView.setOnItemClickListener { parent, view, position, id ->
 
             val clickedRoom = mRomms[position]
+
+            val myIntent = Intent(this, ViewRoomDetailActivity::class.java)
+            myIntent.putExtra("room", clickedRoom)
+            startActivity(myIntent)
 
 
 
