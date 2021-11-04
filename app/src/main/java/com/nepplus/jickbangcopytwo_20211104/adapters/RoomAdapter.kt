@@ -31,7 +31,10 @@ class RoomAdapter(
         val txtAddressAndFloor = row.findViewById<TextView>(R.id.txtAddressAndFloor)
         val txtDescription = row.findViewById<TextView>(R.id.txtDescription)
 
+
+
         txtDescription.text = roomData.description
+        txtPrice.text = roomData.getFormattedPrice()
 
         return row
 
